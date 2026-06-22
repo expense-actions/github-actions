@@ -1,0 +1,36 @@
+name: Inputs
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      print_tags:
+        description: 'Print tags to STDOUT'
+        required: true
+        type: boolean
+      retries:
+        description: 'Number of retries'
+        required: false
+        default: 3
+        type: number
+      environment:
+        description: 'Target environment'
+        required: true
+        type: environment
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: show inputs
+        run: |
+          echo "log Level: ${{ inputs.logLevel }}"
+          echo "print tags: ${{ inputs.print_tags }}"
+          echo "retries: ${{ inputs.retries }}"
+          echo "environment: ${{ inputs.environment }}"
