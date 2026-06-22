@@ -5,7 +5,7 @@ concurrency:
   cancel-in-progress: true 
 jobs:
   build:
-    runs-on: ubuntu-latest #Linux OS. we can have windows 
+    runs-on: ubuntu-latest #Linux OS.
     steps:
       - name: step1
         run: sleep 20
