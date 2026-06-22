@@ -1,4 +1,4 @@
-name: parellel
+name: Parellel
 on: [push]
 jobs: 
   job1: #these should be unique
