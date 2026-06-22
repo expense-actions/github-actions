@@ -1,6 +1,6 @@
 name: Inputs
 on:
-  workflow_dispatch:
+  workflow_dispatch: #manual trigger
     inputs:
       logLevel:
         description: 'Log level'

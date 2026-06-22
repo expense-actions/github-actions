@@ -1,0 +1,12 @@
+name: conditions
+on: [push] 
+jobs:
+  build:
+    runs-on: ubuntu-latest #Linux OS. we can have windows or MAC
+    steps:
+      - name: step1
+        if: github.ref == 'refs/heads/feature-**'
+        run: echo "Hello world"
+      - name: step2
+        if: github.ref == 'refs/heads/main'
+        run: echo "Hello Github Actions"
