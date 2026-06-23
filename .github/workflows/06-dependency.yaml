@@ -20,3 +20,9 @@ jobs:
     steps:
       - name: step1
         run: echo "Hi, I am from JOB3"
+
+  job-4:
+    runs-on: ubuntu-latest #Linux OS.
+    steps:
+      - name: step1
+        run: echo "Hi, I am from JOB4"
